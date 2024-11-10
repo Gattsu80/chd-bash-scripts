@@ -60,11 +60,13 @@ All conversions completed.
 This script is provided as-is without any warranty. Feel free to modify and use it as needed.
 
 
+
 # atomiswave_gdi_to_chd
 
 Atomiswave for Dreamcast often come as gdi that point to iso track files rather than `.raw` and `.bin`. Use this script for those.
 
 Usage is same as above just a diffent `.sh` name.
+
 
 
 # ppsspp_to_chd
@@ -74,7 +76,8 @@ Use this script for PSP as they require a specific conversion method/options or 
 Usage is same as above just a diffent `.sh` name.
 
 
-# M3U Playlist Generation Script
+
+# generate_m3u
 
 ## Overview
 This Bash script automates the creation of `.m3u` playlist files from `.chd` files in a specified directory. It is useful for organizing multi-disc CHD games into M3U playlists for easier access in compatible emulators.
@@ -157,6 +160,7 @@ This script is provided as-is without any warranty. You may modify and distribut
 
 ---
 For more information about CHD files and M3U playlists, refer to the appropriate emulator documentation.
+
 
 
 # generate_m3u_hidden_dir
