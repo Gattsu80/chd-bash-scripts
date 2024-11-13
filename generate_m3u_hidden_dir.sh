@@ -1,7 +1,13 @@
 #!/bin/bash
 
-# Path to the folder containing .chd files
-CHD_FOLDER="/Users/dan/Desktop/.chd"
+# Check if the input directory was provided as an argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 <path_to_chd_folder>"
+    exit 1
+fi
+
+# Set the CHD folder to the argument passed in
+CHD_FOLDER="$1"
 
 # Change to the .chd folder
 cd "$CHD_FOLDER" || { echo "Failed to access CHD folder"; exit 1; }
@@ -16,7 +22,7 @@ for file in *.chd; do
         # Extract the base game name by removing "(Disc X)" and any extra suffix
         base_name=$(echo "$file" | sed -E 's/\s*\(Disc [0-9]+\).*\.chd$//' | xargs)
         
-        # Append the relative path to a temporary file for the game
+        # Append the relative path with ./.chd/ prefix to a temporary file for the game
         echo "./.chd/$file" >> "$base_name.tmp"
     fi
 done
